@@ -11,10 +11,10 @@ namespace ConsoleApp1
             string empName;
             string empID;
 
-            Console.WriteLine("Please Enter your name");
-            empName = Console.ReadLine();
-            isValidName(empName);
-
+            //Console.WriteLine("Please Enter your name");
+            //empName = Console.ReadLine();
+            //isValidName(empName);
+            GetName();
             Console.WriteLine("Please enter your Employee ID");
             empID = Console.ReadLine();
 
@@ -49,6 +49,21 @@ namespace ConsoleApp1
             {
                 return true;
             }
+        }
+        static string GetName()
+        {
+            Console.WriteLine("Please Enter your name");
+            string empName = Console.ReadLine();
+            bool yesno = isValidName(empName);
+
+            while (!yesno)
+            {
+                Console.WriteLine("Please enter a valid name");
+                empName = Console.ReadLine();
+                yesno = isValidName(empName);
+            }
+
+            return empName;
         }
     }
 }
