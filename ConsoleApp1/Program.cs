@@ -13,15 +13,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("Please Enter your name");
             empName = Console.ReadLine();
+            isValidName(empName);
 
             Console.WriteLine("Please enter your Employee ID");
             empID = Console.ReadLine();
 
-
             Console.WriteLine("Please enter your hours worked");
             string input = Console.ReadLine();
-
-
 
             hoursWorked = int.Parse(input);
             if (hoursWorked > 40)
@@ -37,11 +35,20 @@ namespace ConsoleApp1
             Console.WriteLine("Your weekly wage is:  £" + weeklyWage.ToString("F"));
             Console.ReadLine();
 
-            public boolean isValidName(empName);
-            {
-                if empName.Length
-            }
             
+
+        }
+
+        static bool isValidName(string empName)
+        {
+            if ((empName.Length) > 50 || (empName.Length) < 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
