@@ -22,6 +22,13 @@ namespace ConsoleApp1
             string input = Console.ReadLine();
 
             hoursWorked = int.Parse(input);
+
+            while((hoursWorked)> 100 || (hoursWorked) < 1)
+            {
+                Console.WriteLine("Please enter a valid amount of hours worked");
+                input = Console.ReadLine();
+                hoursWorked = int.Parse(input);
+            }
             if (hoursWorked > 40)
             {
                 weeklyWage = 40 * 9.50;
